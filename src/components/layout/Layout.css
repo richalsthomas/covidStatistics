@@ -1,0 +1,39 @@
+.nav {
+  /* width: 100%; */
+  background-color: #282c34;
+  padding: 20px;
+}
+.navList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.navItem {
+  margin: 0 15px;
+}
+.navLink {
+  text-decoration: none;
+  color: #61dafb;
+  fontsize: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.navLink-active {
+  color: white;
+}
+
+.childrenContainer {
+  padding: 10px 40px;
+  /* height: 100vh; */
+  overflow: auto;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
