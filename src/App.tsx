@@ -4,7 +4,7 @@ import "./App.css";
 import {
   Navigate,
   Route,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
 } from "react-router-dom";
 import PiChart from "./components/pages/PiChart";
