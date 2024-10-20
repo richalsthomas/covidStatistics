@@ -2,8 +2,15 @@ import Plot from "react-plotly.js";
 import { sumofData } from "../../utility/sumOfData";
 import { covidData } from "../../data/covidData";
 import { useSelector } from "react-redux";
+import useDarkmodeProp from "../../utility/useDarkmodeProp";
 
 export default function LineChart() {
+  const layout = useDarkmodeProp({
+    title: "Covid Statistics",
+    xaxis: "Type of cases",
+    yaxis: "Number of Cases",
+  });
+
   const selectedStates = useSelector((state: any) => state?.selectedStates);
 
   const dataSum = sumofData(
@@ -30,16 +37,6 @@ export default function LineChart() {
       name: "COVID Cases",
     },
   ];
-
-  const layout = {
-    title: "COVID Cases Over Time",
-    xaxis: {
-      title: "Type of cases",
-    },
-    yaxis: {
-      title: "Number of Cases",
-    },
-  };
 
   return (
     <div style={{ width: "50%", margin: "auto" }}>

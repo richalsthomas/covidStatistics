@@ -7,7 +7,7 @@ import StateSelector from "./stateSelector/StateSelector";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   return (
-    <div>
+    <div className="wrapper">
       <nav className="nav">
         <ul className="navList">
           {pages.map((page) => (

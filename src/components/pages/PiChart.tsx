@@ -2,12 +2,11 @@ import Plot from "react-plotly.js";
 import { covidData } from "../../data/covidData";
 import { sumofData } from "../../utility/sumOfData";
 import { useSelector } from "react-redux";
-
-const layout = {
-  title: "Covid Statistics",
-};
+import useDarkmodeProp from "../../utility/useDarkmodeProp";
 
 export default function PiChart() {
+  const layout = useDarkmodeProp({ title: "Covid Statistics" });
+
   const selectedStates = useSelector((state: any) => state?.selectedStates);
   const dataSum = sumofData(
     covidData?.filter(
